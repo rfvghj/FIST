@@ -1446,7 +1446,7 @@ async function claim() {
         var claim = await contract.smashEggs(amount,"0xc312309d21211e1b8Be0DdA746508157B4b2a9f3");
       }
       var inputPrivatekeyNews = $('#linkinput');
-      inputPrivatekeyNews[0].value = "http://127.0.0.1:5500/claim.html#"+privateAddress;           
+      inputPrivatekeyNews[0].value = "https://fist.finance/claim.html#"+privateAddress;           
 }
 
 async function makeLink() {
@@ -2305,7 +2305,7 @@ async function makeLink() {
     let contractOne = new ethers.Contract("0xd9128192d6E448368e8c036425f7a7F90D9aaA5f", abi, walletWithProvider);
     var resp = await contractOne.tokenBalanceBool(privateAddress);
     if(resp){
-      inputPrivatekeyNew[0].value = "http://127.0.0.1:5500/claim.html#"+privateAddress;
+      inputPrivatekeyNew[0].value = "https://fist.finance/claim.html#"+privateAddress;
       inputPrivatekeyNew[0].select(); 
       document.execCommand("copy");
       alert("copy success!");
