@@ -4325,6 +4325,9 @@ body::-webkit-scrollbar-thumb:hover {
     #shop-cart-section .shop-cart-top .shop-cart-right{
         margin-top: 20px;
     }
+    .cmn-btn{
+        font-size: small;
+    }
 }
 
 @media (max-width: 480px) {
@@ -4518,6 +4521,9 @@ body::-webkit-scrollbar-thumb:hover {
         text-align: center;
         margin-bottom: 30px;
     }
+    .cmn-btn{
+        font-size: small;
+    }
 }
 
 @media (max-width: 375px) {
@@ -4539,6 +4545,9 @@ body::-webkit-scrollbar-thumb:hover {
     }
     #deal-of-day .right-item .bottom-area .cmn-btn.cus-style {
         margin-top: 15px;
+    }
+    .cmn-btn{
+        font-size: small;
     }
     #products-content .nav-tabs {
         justify-content: center;
