@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FistFinance - DeFi one-stop platform</title>
+
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min 2.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
+    <script src="./js/my.js"></script>
+    <style>
+		.tabone{
+			width: 100%;
+			min-height: 250px;
+			display: flex;
+			flex-wrap: wrap;
+    justify-content: center;
+		}
+		.image-li{
+			width: 18%;
+			height: 18%;
+    background: cornsilk;
+    border-radius: 20px;
+    margin: 3px;
+		}
+		.nav a{
+			color: #ffc635 !important;
+		}
+	</style>
+</head>
+
+<body>
+
+    <!-- start preloader -->
+    <div class="preloader" id="preloader"></div>
+    <!-- end preloader -->
+
+    <a href="#" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
+
+    <!-- header-section start -->
+    <header id="header-section">
+        <div class="overlay">
+            <div class="container">
+                <div class="row d-flex header-area">
+                    <div class="logo-section flex-grow-1 d-flex align-items-center">
+                        <a class="site-logo site-title" href="index.html"><img src="images/logo.png"
+                                alt="site-logo"></a>
+                    </div>
+                    <button class="navbar-toggler ml-auto collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <nav class="navbar navbar-expand-lg p-0">
+                        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav main-menu ml-auto">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li class="menu_has_children"><a href="claim.html">NFT</a>
+                                </li>
+                                <li class="menu_has_children"><a href="#0">STAKING</a>
+                                </li>
+                                <li><a href="https://jaymie-mourning.gitbook.io/fist-finance/">Docs</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="right-area header-action d-flex align-items-center">
+                        <div class="search-icon">
+                            <a href="#"></a>
+                        </div>
+                        <a class="cmn-btn" onclick="initWallet()" id="select-address">Connect Wallet</a>
+                       </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-section end -->
+
+    <!-- banner-section start -->
+    <section id="banner-section" class="inner-banner profile features shop">
+        <div class="ani-img">
+            <img class="img-1" src="images/banner-circle-1.png" alt="icon">
+            <img class="img-2" src="images/banner-circle-2.png" alt="icon">
+            <img class="img-3" src="images/banner-circle-2.png" alt="icon">
+        </div>
+        <div class="banner-content d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="main-content">
+                            <h1>Claim NFT</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner-section end -->
+
+    <!-- Shop Cart Start -->
+    <section id="shop-cart-section" class="pt-120 pb-120">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="shop-cart-top">
+                            <div class="row align-items-center">
+                                <div class="col-sm-8">
+                                    <div class="shop-cart-left">
+                                        <p class="text-sm">Fist Finance NFT will start on January 30, 2022 at 14:00 UTC.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 d-flex justify-content-sm-end justify-content-center">
+                                    <div class="shop-cart-right">
+                                        <a href="#" class="text-sm"><img src="images/right-icon.png"
+                                                alt="image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NFT</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <img src="images/cart-image.png" alt="image">
+                                            <span></span>
+                                        </th>
+                                        <td>10 $FIST</td>
+                                        <td>
+                                            <div class="qtySelector text-center">
+                                                <i class="fas fa-minus decreaseQty"></i>
+                                                <input type="text" class="qtyValue" id="buyinput" value="1">
+                                                <i class="fas fa-plus increaseQty"></i>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="cart-dismiss">
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a class="cmn-btn" onclick="approve()">Approve</a>
+                        <a class="cmn-btn" onclick="claim()">Claim Now</a>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="right-sidebar">
+                            <div class="top-area">
+                                <h5>NFT requirements</h5>
+                                <p>Minimum 1 NFTs per address, maximum 10 NFTs</p>
+                                <p>Invite to join Fist Finance, invest in excellent projects and get a higher rate of return! Once your invited friend successfully purchases FistFinance NFT, you will get a 10% refund.</p>
+                            </div>
+                            <div class="bottom-side text-center">
+                                <form>
+                                    <div class="apply d-flex">
+                                        <input type="text" placeholder="Invitation link" id="linkinput">
+                                        <button class="cmn-btn" onclick="makeLink()">Copy</button>
+                                    </div>
+                                </form>
+                                <ul>
+                                    <li class="d-flex align-items-center">
+                                        <span>Your invite link address</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop Cart End -->
+    <section class="pt-120 pb-120">
+        <div>
+            <h3 style="text-align: center;color: #ffc635;">MY NFTS</h3>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist" id="myTabs">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Normal</a></li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Common</a></li>
+              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Rare</a></li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Super Rare</a></li>
+              <li role="presentation"><a href="#five" aria-controls="five" role="tab" data-toggle="tab">Legendary</a></li>
+            </ul>
+          
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                  <div class="tabone" id="taba1">
+                  </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                  <div class="tabone" id="taba2">2</div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="messages">
+                <div class="tabone" id="taba3">3</div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="settings">
+                  <div class="tabone" id="taba4">4</div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="five">
+                <div class="tabone" id="taba5">5</div>
+            </div>
+            </div>
+          
+          </div>
+    </section>>
+
+    <!-- footer-section start -->
+    <footer id="footer-section">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-mid pt-120">
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-lg-8 col-md-8 d-flex justify-content-md-between justify-content-center align-items-center cus-grid">
+                        <div class="logo-section">
+                            <a class="site-logo site-title" href="index.html"><img src="images/logo.png" alt="site-logo"></a>
+                        </div>
+                        <ul class="menu-side d-flex align-items-center">
+                            <li><a href="index.html" class="active"></a></li>
+                            <li><a href="about-us.html"></a></li>
+                            <li><a href="contact.html"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end">
+                        <div class="right-area">
+                            <ul class="d-flex">
+                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="main-content">
+                    <div class="row d-flex align-items-center justify-content-center">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="left-area text-center">
+                                <p> © 2021-2022
+                                    <a href="#"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-section end -->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/fontawesome.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min 2.js"></script>
+
+</body>
+
+<script>
+    var abimedia = [
+    {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "userAddr",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "NFTConut",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "NFTAddr",
+                "type": "address"
+            }
+        ],
+        "name": "ActivityEvent",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "oldAdmin",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "newAdmin",
+                "type": "address"
+            }
+        ],
+        "name": "NewAdmin",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "oldOwner",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "NewOwner",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "oldPendingOwner",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "newPendingOwner",
+                "type": "address"
+            }
+        ],
+        "name": "NewPendingOwner",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "userAddr",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "eggCount",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "chickCount",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address[]",
+                "name": "chickAddrArray",
+                "type": "address[]"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256[]",
+                "name": "tokenIdArray",
+                "type": "uint256[]"
+            }
+        ],
+        "name": "SmashEggsEvent",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "BOSS_CHICK_INDEX",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "LABOR_CHICK_INDEX",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "LUCKY_CHICK_INDEX",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "MINT_PRICE",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "SECTION_SIZE",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "SHRIEKING_CHICK_INDEX",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "TRUMP_CHICK_INDEX",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "acceptOwner",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "activityNFTAddr",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "activityNFTProbability",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "admin",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "aleadyBrokenEggAmount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "chickProbability",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "adr",
+                "type": "address"
+            }
+        ],
+        "name": "getImgUrls",
+        "outputs": [
+            {
+                "internalType": "string[]",
+                "name": "",
+                "type": "string[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            }
+        ],
+        "name": "getLoserFailCount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "loserChickAddrArray",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "nftAmount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "pendingOwner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "randomContract",
+        "outputs": [
+            {
+                "internalType": "contract RandomInterface",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "sectionHasCreatedShriekingChick",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newAdmin",
+                "type": "address"
+            }
+        ],
+        "name": "setAdmin",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_price",
+                "type": "uint256"
+            }
+        ],
+        "name": "setMintPrice",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "setNftAmount",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "shriekingChickSection",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "smashEggs",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "smathEggSwitch",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "receiver",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "count",
+                "type": "uint256"
+            }
+        ],
+        "name": "transferActivityNFT",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_pendingOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_activityNFTAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_activityNFTProbability",
+                "type": "uint256"
+            }
+        ],
+        "name": "updateActivityNFT",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "index",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "probability",
+                "type": "uint256"
+            }
+        ],
+        "name": "updateChickProbability",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "index",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "loserChickAddr",
+                "type": "address"
+            }
+        ],
+        "name": "updateLoserChickAddr",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_randomAddr",
+                "type": "address"
+            }
+        ],
+        "name": "updateRandomAddr",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "updateSeed",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "random",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "section",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bool",
+                "name": "isShriekingChickSection",
+                "type": "bool"
+            }
+        ],
+        "name": "updateShriekingChickSection",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bool",
+                "name": "_smathEggSwitch",
+                "type": "bool"
+            }
+        ],
+        "name": "updateSmathEggSwitch",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+];
+$("a[href='#home']").click(async function(e){
+if (!walletWithProvider) {
+    alert("No wallet connected");
+}
+let contract = new ethers.Contract("0xd9128192d6E448368e8c036425f7a7F90D9aaA5f", abimedia, walletWithProvider);      
+var urls = await contract.getImgUrls("0x57ceE3336fC8D15c83Da049a2D82627220376841");  
+if(urls){
+    $("#taba1").empty();
+    for(var i =0;i<urls.length;i++){
+        $("#taba1").append('<div class="image-li"><img src='+urls[i]+' alt="Responsive image" style="border-radius: 20px;"></div>'); 
+    }
+}
+});
+$("a[href='#profile']").click(async function(e){
+if (!walletWithProvider) {
+    alert("No wallet connected");
+}
+let contract = new ethers.Contract("0xd9128192d6E448368e8c036425f7a7F90D9aaA5f", abimedia, walletWithProvider);      
+var urls = await contract.getImgUrls("0x30229FBBBC8452c43C64A3682fD1d53B76Fe8924");  
+if(urls){
+    $("#taba2").empty();
+    for(var i =0;i<urls.length;i++){
+        $("#taba2").append('<div class="image-li"><img src='+urls[i]+' alt="Responsive image" style="border-radius: 20px;"></div>'); 
+    }
+}
+});
+$("a[href='#messages']").click(async function(e){
+if (!walletWithProvider) {
+    alert("No wallet connected");
+}
+let contract = new ethers.Contract("0xd9128192d6E448368e8c036425f7a7F90D9aaA5f", abimedia, walletWithProvider);      
+var urls = await contract.getImgUrls("0x58342B9c4f8af267f70abA84CA0b9006E6c0653B");  
+if(urls){
+    $("#taba3").empty();
+    for(var i =0;i<urls.length;i++){
+        $("#taba3").append('<div class="image-li"><img src='+urls[i]+' alt="Responsive image" style="border-radius: 20px;"></div>'); 
+    }
+}
+});
+$("a[href='#settings']").click(async function(e){
+if (!walletWithProvider) {
+    alert("No wallet connected");
+}
+let contract = new ethers.Contract("0xd9128192d6E448368e8c036425f7a7F90D9aaA5f", abimedia, walletWithProvider);      
+var urls = await contract.getImgUrls("0xC4c4679c42a3596872878442C1eB8e4d5cde6f72");  
+if(urls){
+    $("#taba4").empty();
+    for(var i =0;i<urls.length;i++){
+        $("#taba4").append('<div class="image-li"><img src='+urls[i]+' alt="Responsive image" style="border-radius: 20px;"></div>'); 
+    }
+}
+});
+$("a[href='#five']").click(async function(e){
+if (!walletWithProvider) {
+    alert("No wallet connected");
+}
+let contract = new ethers.Contract("0xd9128192d6E448368e8c036425f7a7F90D9aaA5f", abimedia, walletWithProvider);      
+var urls = await contract.getImgUrls("0x3A881D48035EBe3a1d8Aed4d8c7c8d82cF1E7c53");  
+if(urls){
+    $("#taba5").empty();
+    for(var i =0;i<urls.length;i++){
+        $("#taba5").append('<div class="image-li"><img src='+urls[i]+' alt="Responsive image" style="border-radius: 20px;"></div>'); 
+    }
+}
+});
+</script>
+</html>
